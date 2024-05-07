@@ -70,6 +70,8 @@ endif()
 file(GLOB SOURCES "src/*.cpp")
 
 add_library(demucs.cpp.lib ${SOURCES})
+set_target_properties(demucs.cpp.lib PROPERTIES OUTPUT_NAME "demucscpp")
+target_include_directories(demucs.cpp.lib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
 # add library Eigen3
 # expose source files to project linking to this one
